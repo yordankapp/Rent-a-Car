@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicles</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+    <div>
+        <div class="navbar">
+            <h1 class="title">Vehicles</h1>
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vehicles.html">Vehicles</a></li>
+                <li><a href="customers.html">Customers</a></li>
+                <li><a href="rent-vehicle.html">Rent vehicle</a></li>
+            </ul>
+        </div>
+        <button id="addBtn" onclick="openPopup('add')">Add vehicle</button>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <span id="action"></span>
+                    <button onclick="closePopup()" class="close-btn">&times;</button>
+                </div>
+                <label for="brand">Brand:</label>
+                <input type="text" id="brand" name="brand">  
+                <label for="model">Model:</label>
+                <input type="text" id="model" name="model">
+                <label for="type">Type:</label>
+                <select name="type" id="type">
+                    <option value="economy">economy</option>
+                    <option value="estate">estate</option>
+                    <option value="luxury">luxury</option>
+                    <option value="SUV">SUV</option>
+                    <option value="cargo">cargo</option>
+                </select>
+                <label for="constructionYear">Construction Year:</label>
+                <input type="text" id="constructionYear" name="constructionYear">
+                <label for="fuelType">Fuel Type</label>
+                <select name="fuelType" id="fuelType">
+                    <option value="petrol">petrol</option>
+                    <option value="diesel">diesel</option>
+                    <option value="hybrid">hybrid</option>
+                    <option value="electric">electric</option>
+                </select>
+                <label for="numberOfSeats">Number of seats:</label>
+                <input type="text" id="numberOfSeats" name="numberOfSeats">
+                <label for="img">Select picture:</label>
+                <div style="height: 21px; width: 50px;">
+                    <input type="file" id="img" name="img" onchange="previewFile()" accept="image/*">
+                </div>
+                <img id="img-preview" class="carImg" src="" alt="">
+                <label for="pricePerDay">Price per day:</label>
+                <input type="text" id="pricePerDay" name="pricePerDay">
+                <div id="available">
+                    <label for="available">Is it available?</label>
+                    <select name="available" id="availableInput">
+                        <option value="yes">yes</option>
+                        <option value="no">no</option>
+                    </select>
+                </div>
+                <div class="popup-footer">
+                    <button id="action-btn"></button>
+                </div>
+            </div>
+        </div>
+        <div id="content"></div>
+    </div>
+</body>
+<script src="js/vehicles.js"></script>
+</html>

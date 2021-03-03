@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent vehicle</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="">
+            <div class="navbar">
+                <h1 class="title">Rent a car</h1>
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="vehicles.html">Vehicles</a></li>
+                    <li><a href="customers.html">Customers</a></li>
+                    <li><a href="rent-vehicle.html">Rent vehicle</a></li>
+                </ul>
+            </div>
+        <div class="content">
+            <div class="flex">
+                <div class="imgbox">
+                     <img class="center-fit" src="img/man-buying-car.jpg">
+                </div>
+                <div class="data">
+                    <h2>Rent a Car</h2>
+                    <label for="customer">Customer:</label>
+                    <select name="customer" id="customer"></select>
+                    <label for="vehicle">Vehicle:</label>
+                    <select name="vehicle" id="vehicle"></select>
+                    <label for="startRent">Start rent:</label>
+                    <input type="datetime-local" name="startRent" id="startRent">
+                    <label for="endRent">End rent:</label>
+                    <input type="datetime-local" name="endRent" id="endRent">
+                    <button id="action-rent" onclick="rent()">Rent</button>
+                </div>
+                <div id="message" class="data">
+                    <h2>Last Rent Info</h2>
+                    <span>Customer: <strong id="customerInfo"></strong></span>
+                    <span>Vehicle: <strong id="vehicleInfo"></strong></span>
+                    <span>Start rent: <strong id="startInfo"></strong></span>
+                    <span>End rent: <strong id="endInfo"></strong></span>
+                    <span>Price: <strong id="price"></strong></span>
+                    <span>Discount: <strong id="discount"></strong></span>
+                    <span id="final">Final Price: <strong id="finalPrice"></strong></span>
+                </div>
+            </div>
+            <div id="rents">
+            </div>
+        </div>
+    </div> 
+</body>
+<script src="js/rents.js"></script>   
+</html>
