@@ -144,3 +144,15 @@ button {
 #rents {
     padding: 1rem;
 }
+
+#stats {
+    background-color: lightgrey;
+    width: 12%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 1rem;
+    padding: 10px;
+    justify-content: center;
+}

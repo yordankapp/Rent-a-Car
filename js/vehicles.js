@@ -84,6 +84,18 @@ function listVehicles(vehicles) {
     document.getElementById("content").innerHTML = format(vehicles);
 }
 
+function mockVehicles(vehicles) {
+    var storage = JSON.parse(localStorage.getItem('vehicles'));
+    if (!storage) {
+        localStorage.setItem('vehicles', JSON.stringify(vehicles));
+        if (document.getElementById("content"))
+            document.getElementById("content").innerHTML = format(vehicles);
+    } else {
+        if (document.getElementById("content"))
+            document.getElementById("content").innerHTML = format(storage);
+    }
+}
+
 function openPopup(action, data = null) {
     var element = document.getElementById("popup");
     element.style.display = "block";
@@ -192,4 +204,4 @@ function deleteVehicle(btnDeleteId) {
     listVehicles(vehicles);
 }
 
-listVehicles(vehicles);
+mockVehicles(vehicles)

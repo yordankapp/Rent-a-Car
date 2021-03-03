@@ -54,6 +54,18 @@ function listCustomers(customers) {
     document.getElementById("content").innerHTML = format(customers);
 }
 
+function mockCustomers(customers) {
+    var storage = JSON.parse(localStorage.getItem('customers'));
+    if (!storage) {
+        localStorage.setItem('customers', JSON.stringify(customers));
+        if (document.getElementById("content"))
+            document.getElementById("content").innerHTML = format(customers);
+    } else {
+        if (document.getElementById("content"))
+            document.getElementById("content").innerHTML = format(storage);
+    }
+}
+
 function openPopup(action, data = null) {
     var element = document.getElementById("popup");
     element.style.display = "block";
@@ -120,7 +132,6 @@ function preparePopup(btnUpdateId) {
 }
 
 function deleteCustomer(btnDeleteId) {
-
     // Delete in storage
     var customers = JSON.parse(localStorage.getItem('customers'));
     customers.splice(btnDeleteId - 1, 1);
@@ -129,4 +140,4 @@ function deleteCustomer(btnDeleteId) {
     listCustomers(customers);
 }
 
-listCustomers(customers);
+mockCustomers(customers);
