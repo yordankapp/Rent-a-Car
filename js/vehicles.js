@@ -6,7 +6,7 @@ var vehicles = [
         constructionYear: '2010', 
         fuelType: 'diesel', 
         numberOfSeats: '4', 
-        picture: '../img/ford-fiesta.jpg', 
+        picture: 'img/ford-fiesta.jpg', 
         pricePerDay: '20$', 
         available: 'yes'
     },
@@ -17,7 +17,7 @@ var vehicles = [
         constructionYear: '2019', 
         fuelType: 'electric', 
         numberOfSeats: '4', 
-        picture: '../img/tesla-x.jpg', 
+        picture: 'img/tesla-x.jpg', 
         pricePerDay: '100$', 
         available: 'no'
     },
@@ -28,7 +28,7 @@ var vehicles = [
         constructionYear: '2017', 
         fuelType: 'petrol', 
         numberOfSeats: '2', 
-        picture: '../img/ford-transit.jpg', 
+        picture: 'img/ford-transit.jpg', 
         pricePerDay: '10$', 
         available: 'yes'
     },
@@ -39,7 +39,7 @@ var vehicles = [
         constructionYear: '2019', 
         fuelType: 'hybrid', 
         numberOfSeats: '4', 
-        picture: '../img/porsche-panamera.jpg', 
+        picture: 'img/porsche-panamera.jpg', 
         pricePerDay: '200$', 
         available: 'no'
     },
@@ -50,7 +50,7 @@ var vehicles = [
         constructionYear: '2020', 
         fuelType: 'hybrid', 
         numberOfSeats: '4', 
-        picture: '../img/volvo-v60.jpg', 
+        picture: 'img/volvo-v60.jpg', 
         pricePerDay: '50$', 
         available: 'yes'
     }
